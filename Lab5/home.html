@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Authentication Page</title>
+	<style>
+        * {
+            padding: 0;
+            margin: 0;
+            /*box-size:border-box;*/
+        }
+        body {
+            background: rgba(0, 0, 0, 0);
+        }
+        #container {
+            width: 300px;
+            margin: 0 auto;
+            margin-top: 150px;
+        }
+        .tabs {
+            display: table-cell;
+            width: 30%;
+            background-color: rgba(11, 177, 224, 0.82);
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+            border: 2px solid #ffffff;
+            border-bottom: 0px;
+            position: relative;
+            font-size: 1.3em;
+            color: #ffffff;
+        }
+        .tabs:hover, p{
+            cursor: pointer;
+        }
+
+        #lt {
+            background-color: rgb(12, 132, 189);
+        }
+        #cont {
+            width: 100%;
+            height: 500px;
+            background-color: rgba(11, 177, 224, 0.82);
+            border: 2px solid #ffffff;
+			padding: 20px;
+        }
+
+        input{
+            display: block;
+            width: 250px;
+            padding: 10px;
+			height: fit-content;
+            font-size: 1.3em;
+            color: rgba(11, 177, 224, 0.82);
+            outline: 2px solid #ffffff;
+        }
+
+        input[type="submit"] {
+            width: 272px;
+            color: #6e6e6e;
+        }
+
+        #clear {
+            clear: both;
+        }
+
+        .comm {
+            position: absolute;
+            visibility: hidden;
+            height: 100px;;
+			
+        }
+        #login {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+	<div  id="container">
+		<div id="tabs">
+            <p id="lt" class="tabs" onclick="loginTabFun()">Log in</p>
+            <p id="rt" class="tabs" onclick="regTabFun()">Register</p>
+
+            <div id="clear"></div>
+        </div>
+		<div id="cont">
+			<div id="register" class="comm">
+				<form action="/signup" method="POST">
+					<input type="text" name="uname" placeholder="User name" required=""><br><br>
+					<input type="number" name="age" placeholder="Age" required=""><br><br>
+					<input type="text" name="email" placeholder="Email" required=""><br><br>
+					<input type="password" name="pswd" placeholder="Password" required=""><br><br>
+					<button type="submit">Sign up</button><br><br>
+				</form>
+			</div>
+
+			<div id="login" class="comm">
+				<form action="/login" method="POST">
+					<input type="text" name="email" placeholder="Email" required=""><br><br>
+					<input type="password" name="pswd" placeholder="Password" required=""><br><br>
+					<button type="submit">Login</button>
+				</form>
+			</div>
+		</div>	
+	</div>
+	<script>
+        var loginBox = document.getElementById("login");
+        var regBox = document.getElementById("register");
+
+        var loginTab = document.getElementById("lt");
+        var regTab = document.getElementById("rt");
+
+        function regTabFun(){
+            event.preventDefault();
+
+            regBox.style.visibility="visible";
+            loginBox.style.visibility="hidden";
+            forgetBox.style.visibility="hidden";
+
+            regTab.style.backgroundColor="rgb(12, 132, 189)";
+            loginTab.style.backgroundColor="rgba(11, 177, 224, 0.82)";
+        }
+        function loginTabFun(){
+            event.preventDefault();
+
+            regBox.style.visibility="hidden";
+            loginBox.style.visibility="visible";
+            forgetBox.style.visibility="hidden";
+
+            loginTab.style.backgroundColor="rgb(12, 132, 189)";
+            regTab.style.backgroundColor="rgba(11, 177, 224, 0.82)";
+        }
+    </script>
+</body>
+</html>
