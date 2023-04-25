@@ -1,0 +1,6 @@
+javac -cp "C:\Program Files\Apache Software Foundation\Tomcat 10.1\lib\servlet-api.jar" -d WebContent\WEB-INF\classes src\net\codejava\servlet\QuickServlet.java
+
+"%JAVA_HOME%\bin\jar" cfv deploy\HitCounter.war -C WebContent .
+
+copy deploy\HitCounter.war "C:\Program Files\Apache Software Foundation\Tomcat 10.1"\webapps
+

@@ -67,6 +67,7 @@ app.post('/login', (req,res)=>{
               //userCredential= detail.email;
               //   console.log(userCredential);
                res.sendFile(path.join(__dirname, '/client.html'));
+               res.redirect("/login"+"?email="+detail.email)
             }
             else{
                 console.log("Wrong Details!");

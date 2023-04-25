@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <!--edit text field for adding name-->
+        <EditText
+            android:id="@+id/idEdtNameLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="48dp"
+            android:hint="Enter username" />
+
+        <!--edit text for adding job-->
+        <EditText
+            android:id="@+id/idEdtPassLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="Enter password" />
+
+        <!--button for adding data-->
+
+        <!--text view for displaying our API response-->
+        <Button
+            android:id="@+id/idBtnPostLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Login"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:id="@+id/idTVResponseLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center_horizontal"
+            android:text="Response"
+            android:textAlignment="center"
+            android:textSize="15sp" />
+
+        <!--progress bar for loading -->
+        <ProgressBar
+            android:id="@+id/idLoadingPBLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
