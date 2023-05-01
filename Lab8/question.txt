@@ -1,0 +1,1 @@
+Android: To make a camera app, retrieve the previously taken image

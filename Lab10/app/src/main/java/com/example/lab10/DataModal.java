@@ -16,7 +16,7 @@ public class DataModal {
     }
 
     public void setName(String name) {
-        this.uname = uname;
+        this.uname = name;
     }
 
     public String getPass() {
